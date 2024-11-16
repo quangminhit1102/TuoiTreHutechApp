@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_blue_color"
+    tools:context=".activities.EditUnionActivity">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="700dp"
+        android:background="@drawable/top_radius"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintVertical_bias="1"
+        android:focusableInTouchMode="true"
+        android:orientation="vertical"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/open_sans_extrabold"
+            android:gravity="center_horizontal"
+            android:text="Cập nhật sổ đoàn"
+            android:textSize="20dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="15dp"
+            />
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:focusableInTouchMode="true"
+
+            >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:paddingVertical="5dp"
+                android:paddingHorizontal="10dp"
+                android:orientation="vertical"
+                >
+                //=========================Unioncode=========================
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Mã sổ đoàn"
+                    app:hintTextColor="#2c98f3"
+                    app:boxStrokeColor="#2c98f3"
+                    android:layout_marginBottom="15dp"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/editUnionCode"
+                        android:layout_width="match_parent"
+                        android:enabled="false"
+                        android:layout_height="wrap_content"
+                        android:textCursorDrawable="@null"/>
+
+                </com.google.android.material.textfield.TextInputLayout>
+                //=========================Name==============================
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/lName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Họ và tên"
+                    app:hintTextColor="#2c98f3"
+                    app:helperTextTextColor="@color/red"
+                    app:helperTextTextAppearance="@style/ErrorTextLabel"
+                    app:boxStrokeColor="#2c98f3"
+                    android:layout_marginBottom="15dp"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/editName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textCursorDrawable="@null"/>
+
+                </com.google.android.material.textfield.TextInputLayout>
+                //=========================StuCode============================
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/lStuCode"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Mã số sinh viên"
+                    app:hintTextColor="#2c98f3"
+                    app:boxStrokeColor="#2c98f3"
+                    app:helperTextTextColor="@color/red"
+                    app:helperTextTextAppearance="@style/ErrorTextLabel"
+                    android:layout_marginBottom="15dp"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/editStuCode"
+                        android:layout_width="match_parent"
+                        android:inputType="number"
+                        android:maxLength="10"
+                        android:layout_height="wrap_content"
+                        android:textCursorDrawable="@null"/>
+
+                </com.google.android.material.textfield.TextInputLayout>
+                //=========================Gender==============================
+                //=========================Birthday============================
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/lBirthday"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Ngày sinh"
+                    app:helperTextTextColor="@color/red"
+                    app:hintTextColor="#2c98f3"
+                    app:helperTextTextAppearance="@style/ErrorTextLabel"
+                    app:boxStrokeColor="#2c98f3"
+                    android:layout_marginBottom="15dp"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/editBirthDay"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:drawableRight="@drawable/edit_calendar"
+                        android:focusableInTouchMode="false"
+                        android:textCursorDrawable="@null"/>
+                </com.google.android.material.textfield.TextInputLayout>
+                //=========================Phone==============================
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/lPhone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Số điện thoại"
+                    app:helperTextTextColor="@color/red"
+                    app:hintTextColor="#2c98f3"
+                    app:helperTextTextAppearance="@style/ErrorTextLabel"
+                    app:boxStrokeColor="#2c98f3"
+                    android:layout_marginBottom="15dp"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/editPhone"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="number"
+                        android:maxLength="11"
+                        android:textCursorDrawable="@null"/>
+
+                </com.google.android.material.textfield.TextInputLayout>
+                //=========================Email==============================
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Email"
+                    android:id="@+id/lEmail"
+                    app:hintTextColor="#2c98f3"
+                    app:helperTextTextColor="@color/red"
+                    app:helperTextTextAppearance="@style/ErrorTextLabel"
+                    app:boxStrokeColor="#2c98f3"
+                    android:layout_marginBottom="15dp"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/editEmail"
+                        android:layout_width="match_parent"
+                        android:maxLength="50"
+                        android:layout_height="wrap_content"
+                        android:textCursorDrawable="@null"/>
+
+                </com.google.android.material.textfield.TextInputLayout>
+                //=========================GetUnionDate==============================
+<!--                <com.google.android.material.textfield.TextInputLayout-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:id="@+id/lGetDay"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:hint="Lấy sổ trước ngày"-->
+<!--                    app:helperTextTextColor="@color/red"-->
+<!--                    app:helperTextTextAppearance="@style/ErrorTextLabel"-->
+<!--                    app:hintTextColor="#2c98f3"-->
+<!--                    app:boxStrokeColor="#2c98f3"-->
+<!--                    android:layout_marginBottom="15dp"-->
+<!--                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">-->
+<!--                    <com.google.android.material.textfield.TextInputEditText-->
+<!--                        android:id="@+id/editGetUnionDay"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:drawableRight="@drawable/edit_calendar"-->
+<!--                        android:focusableInTouchMode="false"-->
+<!--                        android:textCursorDrawable="@null"/>-->
+<!--                </com.google.android.material.textfield.TextInputLayout>-->
+                //=========================JoinDate==============================
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Ngày vào đoàn"
+                    app:helperTextTextColor="@color/red"
+                    android:id="@+id/lJoinDay"
+                    app:helperTextTextAppearance="@style/ErrorTextLabel"
+                    app:hintTextColor="#2c98f3"
+                    app:boxStrokeColor="#2c98f3"
+                    android:layout_marginBottom="15dp"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/editJoinDay"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:drawableRight="@drawable/edit_calendar"
+                        android:focusableInTouchMode="false"
+                        android:textCursorDrawable="@null"/>
+                </com.google.android.material.textfield.TextInputLayout>
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnUpdate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20dp"
+                    android:text="Cập nhật"
+                    android:textSize="18dp"
+                    android:textAllCaps="false"
+                    android:paddingVertical="15dp"
+                    app:cornerRadius="7dp"
+                    android:backgroundTint="#3791D5"/>
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
